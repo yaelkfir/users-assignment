@@ -28,7 +28,7 @@ export const UsersProvider = ({ children }: { children: React.ReactNode }) => {
         return next;
     };
     const addUser = (user: User) => {
-        setData([{ user, id: data.length }, ...data]);
+        setData([{ ...user, id: data.length }, ...data]);
     };
 
     const deleteUser = async (user: User) => {
